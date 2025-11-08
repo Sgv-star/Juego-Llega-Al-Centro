@@ -39,6 +39,7 @@
 		<Unit filename="include/Dado.h" />
 		<Unit filename="include/Juego.h" />
 		<Unit filename="include/Jugador.h" />
+		<Unit filename="include/RNG.h" />
 		<Unit filename="include/Tablero.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Casilla.cpp" />
@@ -46,6 +47,7 @@
 		<Unit filename="src/Dado.cpp" />
 		<Unit filename="src/Juego.cpp" />
 		<Unit filename="src/Jugador.cpp" />
+		<Unit filename="src/RNG.cpp" />
 		<Unit filename="src/Tablero.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
