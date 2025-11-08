@@ -45,10 +45,11 @@
 
 1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
+1762632243 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
 	"Dado.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
+1762631668 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
+	<RNG.h>
 
 1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
