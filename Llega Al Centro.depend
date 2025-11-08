@@ -32,3 +32,36 @@
 
 1762549398 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\tablero.h
 
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
+	<iostream>
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casilla.cpp
+	"Casilla.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\casilla.h
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
+	"CasillaEspecial.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
+	"Dado.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
+	"Juego.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
+	"Jugador.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
+
+1762582245 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
+	"Tablero.h"
+
+1762582245 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+
