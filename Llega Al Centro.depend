@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1762549506 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\main.cpp
+	<iostream>
+
+1762549418 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\casilla.cpp
+	"Casilla.h"
+
+1762549418 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\casilla.h
+
+1762549440 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\casillaespecial.cpp
+	"CasillaEspecial.h"
+
+1762549440 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\casillaespecial.h
+
+1762549478 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\dado.cpp
+	"Dado.h"
+
+1762549478 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\dado.h
+
+1762549334 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\juego.cpp
+	"Juego.h"
+
+1762549334 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\juego.h
+
+1762549359 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\jugador.cpp
+	"Jugador.h"
+
+1762549359 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\jugador.h
+
+1762549399 source:d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\src\tablero.cpp
+	"Tablero.h"
+
+1762549398 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\tablero.h
+
