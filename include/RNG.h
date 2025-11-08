@@ -9,7 +9,9 @@ class RNG
     public:
         RNG();
         RNG(int valorMaximo=0);
+
         void setValorMaximo(int valorMaximo);
+
         int getValorMaximo();
         int getRandom();
 

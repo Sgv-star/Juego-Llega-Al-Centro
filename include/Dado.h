@@ -9,9 +9,11 @@ class Dado
     public:
         Dado();
         Dado(int PVMaximo);
-        int sacarNumero();
+
         void setPVMaximo(int PVMaximo);
+
         int getPVMaximo();
+        int sacarNumero();
 
     protected:
 
