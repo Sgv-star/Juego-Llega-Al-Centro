@@ -31,6 +31,6 @@ int Casilla::getColumna(){
     return columna;
 }
 
-bool getEsCasillaCentral(){
+bool Casilla::getEsCasillaCentral(){
     return esCasillaCentral;
 }

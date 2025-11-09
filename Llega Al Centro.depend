@@ -35,20 +35,22 @@
 1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
 	<iostream>
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casilla.cpp
+1762647542 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casilla.cpp
 	"Casilla.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\casilla.h
+1762645390 d:\users\usuario\desktop\juego-llega-al-centro\include\casilla.h
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
+1762647277 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
 	"CasillaEspecial.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
+1762647463 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
+	<Casilla.h>
+	<string>
 
-1762632243 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
+1762644985 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
 	"Dado.h"
 
-1762631668 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
+1762644985 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
 	<RNG.h>
 
 1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
@@ -56,10 +58,11 @@
 
 1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
+1762636553 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
 	"Jugador.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
+1762636303 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
+	<string>
 
 1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
 	"Tablero.h"
@@ -69,6 +72,6 @@
 1762631881 source:d:\users\usuario\desktop\juego-llega-al-centro\src\rng.cpp
 	"RNG.h"
 
-1762622643 d:\users\usuario\desktop\juego-llega-al-centro\include\rng.h
+1762645390 d:\users\usuario\desktop\juego-llega-al-centro\include\rng.h
 	<random>
 
