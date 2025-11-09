@@ -2,8 +2,21 @@
 
 CasillaEspecial::CasillaEspecial()
 {
-    this -> descubierta = false;
     //ctor
+}
+
+CasillaEspecial::CasillaEspecial(int PVMaximo)
+{
+    this -> descubierta = false;
+    RNG rngValorCasillaEspecial = RNG(PVMaximo);
+    this -> valor = rngValorCasillaEspecial.getRandom();
+    RNG rngTipoCasillaEspecial = RNG(1);
+    if (rngTipoCasillaEspecial.getRandom()==0){
+        this -> tipo = "recompensa";
+    }
+    else{
+        this -> tipo = "castigo";
+    }
 }
 
 void CasillaEspecial::setTipo(string tipo){

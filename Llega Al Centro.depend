@@ -40,11 +40,12 @@
 
 1762645390 d:\users\usuario\desktop\juego-llega-al-centro\include\casilla.h
 
-1762647277 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
+1762670511 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
 	"CasillaEspecial.h"
 
-1762647463 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
+1762670381 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
 	<Casilla.h>
+	<RNG.h>
 	<string>
 
 1762644985 source:d:\users\usuario\desktop\juego-llega-al-centro\src\dado.cpp
@@ -64,10 +65,14 @@
 1762636303 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
 	<string>
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
+1762670615 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
 	"Tablero.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+1762670474 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+	<algorithm>
+	<Casilla.h>
+	<CasillaEspecial.h>
+	<RNG.h>
 
 1762631881 source:d:\users\usuario\desktop\juego-llega-al-centro\src\rng.cpp
 	"RNG.h"
