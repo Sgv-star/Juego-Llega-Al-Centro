@@ -37,6 +37,7 @@
 		<Unit filename="include/Casilla.h" />
 		<Unit filename="include/CasillaEspecial.h" />
 		<Unit filename="include/Dado.h" />
+		<Unit filename="include/GestorArchivos.h" />
 		<Unit filename="include/Juego.h" />
 		<Unit filename="include/Jugador.h" />
 		<Unit filename="include/RNG.h" />
@@ -45,6 +46,7 @@
 		<Unit filename="src/Casilla.cpp" />
 		<Unit filename="src/CasillaEspecial.cpp" />
 		<Unit filename="src/Dado.cpp" />
+		<Unit filename="src/GestorArchivos.cpp" />
 		<Unit filename="src/Juego.cpp" />
 		<Unit filename="src/Jugador.cpp" />
 		<Unit filename="src/RNG.cpp" />

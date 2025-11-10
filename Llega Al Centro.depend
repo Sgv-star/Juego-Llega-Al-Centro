@@ -54,21 +54,27 @@
 1762644985 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
 	<RNG.h>
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
+1762745538 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
 
-1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
+1762745530 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
+	<vector>
+	<Dado.h>
+	<Jugador.h>
+	<Tablero.h>
 
-1762636553 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
+1762742337 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
 	"Jugador.h"
 
-1762636303 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
+1762742356 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
 	<string>
 
 1762670615 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
 	"Tablero.h"
 
-1762670474 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+1762710555 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+	<vector>
+	<utility>
 	<algorithm>
 	<Casilla.h>
 	<CasillaEspecial.h>
@@ -79,4 +85,9 @@
 
 1762645390 d:\users\usuario\desktop\juego-llega-al-centro\include\rng.h
 	<random>
+
+1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\src\gestorarchivos.cpp
+	"GestorArchivos.h"
+
+1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\gestorarchivos.h
 

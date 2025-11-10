@@ -5,12 +5,12 @@ Jugador::Jugador()
     //ctor
 }
 
-Jugador::Jugador(string nombre, int PVInicial, int PVActual, int numeroJugador, bool estado, int posicionActual){
+Jugador::Jugador(string nombre, int PVInicial, int numeroJugador, pair<int, int> posicionActual){
     this -> nombre = nombre;
     this -> PVInicial = PVInicial;
-    this -> PVActual = PVActual;
+    this -> PVActual = PVInicial;
     this -> numeroJugador = numeroJugador;
-    this -> estado = estado;
+    this -> estado = true;
     this -> posicionActual = posicionActual;
 }
 
@@ -34,7 +34,7 @@ void Jugador::setEstado(bool estado){
     this -> estado = estado;
 }
 
-void Jugador::setPosicionActual(int posicionActual){
+void Jugador::setPosicionActual(pair<int, int> posicionActual){
     this -> posicionActual = posicionActual;
 }
 
@@ -58,6 +58,6 @@ bool Jugador::getEstado(){
     return estado;
 }
 
-int Jugador::getPosicionActual(){
+pair<int, int> Jugador::getPosicionActual(){
     return posicionActual;
 }

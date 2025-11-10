@@ -1,5 +1,7 @@
 #ifndef TABLERO_H
 #define TABLERO_H
+#include <vector>
+#include <utility>
 #include <algorithm>
 #include <Casilla.h>
 #include <CasillaEspecial.h>

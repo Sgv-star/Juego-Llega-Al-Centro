@@ -8,21 +8,21 @@ class Jugador
 {
     public:
         Jugador();
-        Jugador(string nombre, int PVInicial, int PVActual, int numeroJugador, bool estado, int posicionActual);
+        Jugador(string nombre, int PVInicial, int numeroJugador, pair<int, int> posicionActual);
 
         void setNombre(string nombre);
         void setPVInicial(int PVInicial);
         void setPVActual(int PVActual);
         void setNumeroJugador(int numeroJugador);
         void setEstado(bool estado);
-        void setPosicionActual(int posicionActual);
+        void setPosicionActual(pair<int, int> posicionActual);
 
         string getNombre();
         int getPVInicial();
         int getPVActual();
         int getNumeroJugador();
         bool getEstado();
-        int getPosicionActual();
+        pair<int, int> getPosicionActual();
 
     protected:
 
@@ -32,7 +32,7 @@ class Jugador
         int PVActual;
         int numeroJugador;
         bool estado;
-        int posicionActual;
+        pair<int, int> posicionActual;
 };
 
 #endif // JUGADOR_H
