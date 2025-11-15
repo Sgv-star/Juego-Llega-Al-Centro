@@ -5,10 +5,9 @@ using namespace std;
 
 int menu();
 int menuNuevaPartida();
-
 int main()
 {
-    vector<Juego> juegos;
+    vector<Juego> juegos(1);
     int opcion = menu();
 
     do{
@@ -17,13 +16,13 @@ int main()
             int opcionNuevaPartida = menuNuevaPartida();
             switch(opcionNuevaPartida){
             case 1:{
-                juegos[0].setDificultad("facil");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -45,18 +44,19 @@ int main()
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                 }
+                juegos[0].setDificultad("facil");
                 juegos[0].setJugadores(jugadores);
 
                 break;
             }
             case 2:{
-                juegos[0].setDificultad("medio");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -78,17 +78,18 @@ int main()
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                 }
+                juegos[0].setDificultad("medio");
                 juegos[0].setJugadores(jugadores);
                 break;
             }
             case 3:{
-                juegos[0].setDificultad("dificil");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -110,6 +111,7 @@ int main()
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                 }
+                juegos[0].setDificultad("dificil");
                 juegos[0].setJugadores(jugadores);
 
                 break;

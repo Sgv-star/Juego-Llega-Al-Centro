@@ -32,7 +32,7 @@ class Jugador
         int PVActual;
         int numeroJugador;
         bool estado;
-        pair<int, int> posicionActual;
+        pair<int, int> posicionActual; //Almacenar dos datos en una misma variable
 };
 
 #endif // JUGADOR_H

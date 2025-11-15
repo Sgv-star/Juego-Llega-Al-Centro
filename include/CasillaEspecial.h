@@ -23,7 +23,7 @@ class CasillaEspecial: public Casilla
     private:
         string tipo;
         bool descubierta;
-        int valor;
+        int valor;  //NUMERO QUE QUITA O DA LA CASILLA ESPECIAL
 };
 
 #endif // CASILLAESPECIAL_H
