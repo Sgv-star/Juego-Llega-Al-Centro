@@ -91,3 +91,65 @@
 
 1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\gestorarchivos.h
 
+1763242812 source:c:\users\administrator\juego-llega-al-centro\main.cpp
+	<iostream>
+	<string>
+	<Juego.h>
+
+1763242308 c:\users\administrator\juego-llega-al-centro\include\juego.h
+	<vector>
+	<Dado.h>
+	<Jugador.h>
+	<Tablero.h>
+	<iostream>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\dado.h
+	<RNG.h>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\rng.h
+	<random>
+
+1763154031 c:\users\administrator\juego-llega-al-centro\include\jugador.h
+	<string>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\tablero.h
+	<vector>
+	<utility>
+	<algorithm>
+	<Casilla.h>
+	<CasillaEspecial.h>
+	<RNG.h>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\casilla.h
+
+1763154031 c:\users\administrator\juego-llega-al-centro\include\casillaespecial.h
+	<Casilla.h>
+	<RNG.h>
+	<string>
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\casilla.cpp
+	"Casilla.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\casillaespecial.cpp
+	"CasillaEspecial.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\dado.cpp
+	"Dado.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\gestorarchivos.cpp
+	"GestorArchivos.h"
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\gestorarchivos.h
+
+1763242897 source:c:\users\administrator\juego-llega-al-centro\src\juego.cpp
+	"Juego.h"
+
+1763154031 source:c:\users\administrator\juego-llega-al-centro\src\jugador.cpp
+	"Jugador.h"
+
+1763152904 source:c:\users\administrator\juego-llega-al-centro\src\rng.cpp
+	"RNG.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\tablero.cpp
+	"Tablero.h"
+

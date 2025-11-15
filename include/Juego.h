@@ -4,7 +4,8 @@
 #include <Dado.h>
 #include <Jugador.h>
 #include <Tablero.h>
-
+using namespace std;
+#include <iostream>
 class Juego
 {
     public:
