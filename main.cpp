@@ -9,6 +9,7 @@ int menuNuevaPartida();
 int main()
 {
     vector<Juego> juegos;
+    juegos[0] = Juego();
     int opcion = menu();
 
     do{

@@ -32,8 +32,10 @@
 
 1762549398 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\tablero.h
 
-1762619596 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
+1763242573 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
 	<iostream>
+	<string>
+	<Juego.h>
 
 1762647542 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casilla.cpp
 	"Casilla.h"
@@ -54,7 +56,7 @@
 1762644985 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
 	<RNG.h>
 
-1762745538 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
+1762745785 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
 
 1762745530 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
