@@ -15,12 +15,20 @@ class Tablero
         Tablero(int tamano);
 
         void setTamano(int tamano);
-
         int getTamano();
+
+        bool getEsEspecial(int fila, int col);
+        bool getDescubierta(int fila, int col);
+        int  getValor(int fila, int col);
+        void descubrir(int fila, int col);
+
 
     protected:
 
     private:
+        vector<vector<bool>> esEspecial;
+        vector<vector<bool>> descubierta;
+        vector<vector<int>> valor;
         int tamano;
         Casilla casillas;
         CasillaEspecial casillasEspeciales;

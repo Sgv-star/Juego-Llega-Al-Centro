@@ -46,6 +46,7 @@ int main()
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                 }
+                system("cls");
                 juegos[0].setJugadores(jugadores);
                 juegos[0].setDificultad("facil");
                 juegos[0].setTablero(15);
@@ -83,9 +84,12 @@ int main()
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                 }
+                system("cls");
                 juegos[0].setJugadores(jugadores);
                 juegos[0].setDificultad("medio");
+                juegos[0].setTablero(23);
                 juegos[0].setJuego();
+                juegos[0].jugar();
                 break;
             }
             case 3:{
@@ -117,10 +121,12 @@ int main()
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                 }
+                system("cls");
                 juegos[0].setJugadores(jugadores);
                 juegos[0].setDificultad("dificil");
-
+                juegos[0].setTablero(31);
                 juegos[0].setJuego();
+                juegos[0].jugar();
 
                 break;
             }

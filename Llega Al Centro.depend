@@ -94,7 +94,7 @@
 
 1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\gestorarchivos.h
 
-1763314487 source:c:\users\administrator\juego-llega-al-centro\main.cpp
+1763327119 source:c:\users\administrator\juego-llega-al-centro\main.cpp
 	<iostream>
 	<string>
 	<Juego.h>
@@ -115,7 +115,7 @@
 1763154031 c:\users\administrator\juego-llega-al-centro\include\jugador.h
 	<string>
 
-1763136419 c:\users\administrator\juego-llega-al-centro\include\tablero.h
+1763325702 c:\users\administrator\juego-llega-al-centro\include\tablero.h
 	<vector>
 	<utility>
 	<algorithm>
@@ -144,7 +144,7 @@
 
 1763136419 c:\users\administrator\juego-llega-al-centro\include\gestorarchivos.h
 
-1763315523 source:c:\users\administrator\juego-llega-al-centro\src\juego.cpp
+1763332276 source:c:\users\administrator\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
 
 1763154031 source:c:\users\administrator\juego-llega-al-centro\src\jugador.cpp
@@ -153,6 +153,6 @@
 1763152904 source:c:\users\administrator\juego-llega-al-centro\src\rng.cpp
 	"RNG.h"
 
-1763136419 source:c:\users\administrator\juego-llega-al-centro\src\tablero.cpp
+1763327459 source:c:\users\administrator\juego-llega-al-centro\src\tablero.cpp
 	"Tablero.h"
 
