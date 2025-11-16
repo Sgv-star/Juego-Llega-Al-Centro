@@ -129,73 +129,123 @@ void Juego::setJuego() {
 }
 
 //La idea aqui es que los dados se lancen segun la posicion del jugador y dentro del propio vector el orden es así (arriba, abajo, izquierda, derecha)
-void Juego::moverJugadores(int numeroJugador){
-    int x= jugadores[numeroJugador].getPosicionActual().first, y= jugadores[numeroJugador].getPosicionActual().second, eleccionSentido=0, tamano=tablero.getTamano();
+bool Juego::moverJugadores(int numeroJugador){
+    // 1. Determinar el tamaño del tablero según la dificultad
+    int tamano = 0;
+    if (dificultad == "facil")      tamano = 15;
+    else if (dificultad == "medio") tamano = 23;
+    else if (dificultad == "dificil") tamano = 31;
+
+    // 2. Posición actual del jugador
+    int x = jugadores[numeroJugador].getPosicionActual().first;
+    int y = jugadores[numeroJugador].getPosicionActual().second;
+    int eleccionSentido = 0;
+
     int arriba = -1, abajo = -1, izquierda = -1, derecha = -1;
     pair<int, int> posicionActual(x, y);
 
-    if(x!=0 && x!=tablero.getTamano()-1 && y!=0 && y!=tablero.getTamano()-1){
-        dados.resize(4);
-        for(int i=0; i<dados.size(); i++){
-            dados[i] = Dado(jugadores[numeroJugador].getPVInicial());
-            switch(i){
-            case 0:
-                if(x>0){
+    // 3. Crear dados para cada dirección
+    dados.resize(4);
+    for(int i = 0; i < dados.size(); i++){
+        dados[i] = Dado(jugadores[numeroJugador].getPVInicial());
+        switch(i){
+        case 0: // arriba
+            if(x > 0){
                 arriba = dados[i].sacarNumero();
                 cout << "Arriba: " << arriba << endl;
-                }
-            case 1:
-                if(x<tamano-1){
+            }
+            break;
+        case 1: // abajo
+            if(x < tamano-1){
                 abajo = dados[i].sacarNumero();
                 cout << "Abajo: " << abajo << endl;
-                }
-            case 2:
-                if(y>0){
+            }
+            break;
+        case 2: // izquierda
+            if(y > 0){
                 izquierda = dados[i].sacarNumero();
                 cout << "Izquierda: " << izquierda << endl;
-                }
-            case 3:
-                if(y<tamano-1){
+            }
+            break;
+        case 3: // derecha
+            if(y < tamano-1){
                 derecha = dados[i].sacarNumero();
                 cout << "Derecha: " << derecha << endl;
-                }
             }
+            break;
         }
-        vector<int> direcciones = {arriba, abajo, izquierda, derecha};
-        do {
-            cout << "Escoja un sentido (0: Arriba, 1: Abajo, 2: Izquierda, 3: Derecha): ";
-            cin >> eleccionSentido;
+    }
 
-            if (direcciones[eleccionSentido] == -1) {
-                cout << " Movimiento inválido (fuera del tablero). Escoja una direccion valida." << endl;
-            }
+    // 4. Elegir dirección válida
+    vector<int> direcciones = {arriba, abajo, izquierda, derecha};
+    do {
+        cout << "Escoja un sentido (0: Arriba, 1: Abajo, 2: Izquierda, 3: Derecha): ";
+        cin >> eleccionSentido;
 
-        } while (direcciones[eleccionSentido] == -1);
-        jugadores[numeroJugador].setPVActual(jugadores[numeroJugador].getPVActual()-direcciones[eleccionSentido]);
-
-        if(eleccionSentido==0 || eleccionSentido==1){
-            if(eleccionSentido==0){
-                posicionActual = {x-1, y};
-            }
-            else{
-                posicionActual = {x+1, y};
-            }
+        if (eleccionSentido < 0 || eleccionSentido > 3) {
+            cout << "Opción fuera de rango. Intente de nuevo.\n";
+            continue;
         }
-        else{
-            if(eleccionSentido==2){
-                posicionActual = {x, y-1};
-            }
-            else{
-                posicionActual = {x, y+1};
-            }
+
+        if (direcciones[eleccionSentido] == -1) {
+            cout << "Movimiento inválido (fuera del tablero). Escoja una direccion valida." << endl;
         }
-        jugadores[numeroJugador].setPosicionActual(posicionActual);
 
-        setJuego();
+    } while (eleccionSentido < 0 || eleccionSentido > 3 ||
+             direcciones[eleccionSentido] == -1);
 
-        if (jugadores[numeroJugador].getPosicionActual().first == (tablero.getTamano()-1)/2 && jugadores[numeroJugador].getPosicionActual().second == (tablero.getTamano()-1)/2){
-            cout << "Juego terminado"<<endl;
-            cout << "El ganador es: " << jugadores[numeroJugador].getNombre() << endl;
+    // 5. Actualizar PV
+    jugadores[numeroJugador].setPVActual(
+        jugadores[numeroJugador].getPVActual() - direcciones[eleccionSentido]
+    );
+
+    // 6. Actualizar posición según dirección elegida
+    if (eleccionSentido == 0) {          // arriba
+        posicionActual = {x-1, y};
+    } else if (eleccionSentido == 1) {   // abajo
+        posicionActual = {x+1, y};
+    } else if (eleccionSentido == 2) {   // izquierda
+        posicionActual = {x, y-1};
+    } else if (eleccionSentido == 3) {   // derecha
+        posicionActual = {x, y+1};
+    }
+
+    jugadores[numeroJugador].setPosicionActual(posicionActual);
+
+    // 7. Redibujar el tablero
+    setJuego();
+
+    // 8. Comprobar si llegó al centro
+    int centro = (tamano - 1) / 2;
+    if (jugadores[numeroJugador].getPosicionActual().first  == centro &&
+        jugadores[numeroJugador].getPosicionActual().second == centro) {
+        cout << "Juego terminado" << endl;
+        cout << "El ganador es: " << jugadores[numeroJugador].getNombre() << endl;
+        return true;
+    }
+
+    return false; // nadie ha ganado todavía
+}
+
+
+
+void Juego::jugar() {
+    bool terminado = false;
+    int turno = 0;
+
+
+    while (!terminado) {
+        cout << "Turno del jugador "<<endl
+             << jugadores[turno].getNumeroJugador()
+             << " (" << jugadores[turno].getNombre() << ")\n";
+
+        // moverJugadores devuelve true si alguien ganó
+        terminado = moverJugadores(turno);
+
+        if (!terminado) {
+            // pasar el turno al siguiente jugador
+            turno = (turno + 1) % jugadores.size();
         }
     }
 }
+

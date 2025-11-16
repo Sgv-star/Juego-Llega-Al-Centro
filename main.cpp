@@ -48,7 +48,9 @@ int main()
                 }
                 juegos[0].setJugadores(jugadores);
                 juegos[0].setDificultad("facil");
+                juegos[0].setTablero(15);
                 juegos[0].setJuego();
+                juegos[0].jugar();
 
                 break;
             }
@@ -117,6 +119,7 @@ int main()
                 }
                 juegos[0].setJugadores(jugadores);
                 juegos[0].setDificultad("dificil");
+
                 juegos[0].setJuego();
 
                 break;
