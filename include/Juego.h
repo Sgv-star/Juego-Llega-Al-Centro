@@ -4,6 +4,8 @@
 #include <Dado.h>
 #include <Jugador.h>
 #include <Tablero.h>
+#include <iostream>
+using namespace std;
 
 class Juego
 {
@@ -15,6 +17,9 @@ class Juego
         void setDados(vector<Dado> dados);
         void setTablero(Tablero tablero);
         void setDificultad(string dificultad);
+        void setJuego();
+
+        void moverJugadores(int numeroJugador);
 
 
     protected:

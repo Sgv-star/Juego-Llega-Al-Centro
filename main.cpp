@@ -5,11 +5,11 @@ using namespace std;
 
 int menu();
 int menuNuevaPartida();
-
 int main()
 {
-    vector<Juego> juegos;
-    juegos[0] = Juego();
+
+    vector<Juego> juegos(1);
+
     int opcion = menu();
 
     do{
@@ -18,13 +18,13 @@ int main()
             int opcionNuevaPartida = menuNuevaPartida();
             switch(opcionNuevaPartida){
             case 1:{
-                juegos[0].setDificultad("facil");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -34,30 +34,32 @@ int main()
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                     else if(i==1){
-                        pair<int, int> posicionActual(0, 15);
+                        pair<int, int> posicionActual(0, 14);
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                     else if(i==2){
-                        pair<int, int> posicionActual(15, 15);
+                        pair<int, int> posicionActual(14, 14);
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                     else if(i==3){
-                        pair<int, int> posicionActual(15, 0);
+                        pair<int, int> posicionActual(14, 0);
                         jugadores[i] = Jugador(nombre, 15, i, posicionActual);
                     }
                 }
                 juegos[0].setJugadores(jugadores);
+                juegos[0].setDificultad("facil");
+                juegos[0].setJuego();
 
                 break;
             }
             case 2:{
-                juegos[0].setDificultad("medio");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -67,29 +69,31 @@ int main()
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                     else if(i==1){
-                        pair<int, int> posicionActual(0, 23);
+                        pair<int, int> posicionActual(0, 22);
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                     else if(i==2){
-                        pair<int, int> posicionActual(23, 23);
+                        pair<int, int> posicionActual(22, 22);
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                     else if(i==3){
-                        pair<int, int> posicionActual(23, 0);
+                        pair<int, int> posicionActual(22, 0);
                         jugadores[i] = Jugador(nombre, 23, i, posicionActual);
                     }
                 }
                 juegos[0].setJugadores(jugadores);
+                juegos[0].setDificultad("medio");
+                juegos[0].setJuego();
                 break;
             }
             case 3:{
-                juegos[0].setDificultad("dificil");
+
 
                 int numeroJugadores=0;
                 cout << "Ingrese el numero de jugadores: ";
                 cin >> numeroJugadores;
                 cout << endl;
-                vector<Jugador> jugadores;
+                vector<Jugador> jugadores(numeroJugadores);
                 for(int i=0; i<numeroJugadores; i++){
                     string nombre;
                     cout << "Ingrese el nombre del jugador " << i << ": ";
@@ -99,19 +103,21 @@ int main()
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                     else if(i==1){
-                        pair<int, int> posicionActual(0, 31);
+                        pair<int, int> posicionActual(0, 30);
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                     else if(i==2){
-                        pair<int, int> posicionActual(31, 31);
+                        pair<int, int> posicionActual(30, 30);
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                     else if(i==3){
-                        pair<int, int> posicionActual(31, 0);
+                        pair<int, int> posicionActual(30, 0);
                         jugadores[i] = Jugador(nombre, 31, i, posicionActual);
                     }
                 }
                 juegos[0].setJugadores(jugadores);
+                juegos[0].setDificultad("dificil");
+                juegos[0].setJuego();
 
                 break;
             }

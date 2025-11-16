@@ -32,7 +32,7 @@
 
 1762549398 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\tablero.h
 
-1763242573 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
+1763260784 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
 	<iostream>
 	<string>
 	<Juego.h>
@@ -45,7 +45,7 @@
 1762670511 source:d:\users\usuario\desktop\juego-llega-al-centro\src\casillaespecial.cpp
 	"CasillaEspecial.h"
 
-1762670381 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
+1763244094 d:\users\usuario\desktop\juego-llega-al-centro\include\casillaespecial.h
 	<Casilla.h>
 	<RNG.h>
 	<string>
@@ -56,19 +56,20 @@
 1762644985 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
 	<RNG.h>
 
-1762745785 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
+1763261578 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
 
-1762745530 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
+1763257670 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
 	<vector>
 	<Dado.h>
 	<Jugador.h>
 	<Tablero.h>
+	<iostream>
 
 1762742337 source:d:\users\usuario\desktop\juego-llega-al-centro\src\jugador.cpp
 	"Jugador.h"
 
-1762742356 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
+1763244094 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
 	<string>
 
 1762670615 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
@@ -92,4 +93,66 @@
 	"GestorArchivos.h"
 
 1762619596 d:\users\usuario\desktop\juego-llega-al-centro\include\gestorarchivos.h
+
+1763242812 source:c:\users\administrator\juego-llega-al-centro\main.cpp
+	<iostream>
+	<string>
+	<Juego.h>
+
+1763242308 c:\users\administrator\juego-llega-al-centro\include\juego.h
+	<vector>
+	<Dado.h>
+	<Jugador.h>
+	<Tablero.h>
+	<iostream>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\dado.h
+	<RNG.h>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\rng.h
+	<random>
+
+1763154031 c:\users\administrator\juego-llega-al-centro\include\jugador.h
+	<string>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\tablero.h
+	<vector>
+	<utility>
+	<algorithm>
+	<Casilla.h>
+	<CasillaEspecial.h>
+	<RNG.h>
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\casilla.h
+
+1763154031 c:\users\administrator\juego-llega-al-centro\include\casillaespecial.h
+	<Casilla.h>
+	<RNG.h>
+	<string>
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\casilla.cpp
+	"Casilla.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\casillaespecial.cpp
+	"CasillaEspecial.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\dado.cpp
+	"Dado.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\gestorarchivos.cpp
+	"GestorArchivos.h"
+
+1763136419 c:\users\administrator\juego-llega-al-centro\include\gestorarchivos.h
+
+1763242897 source:c:\users\administrator\juego-llega-al-centro\src\juego.cpp
+	"Juego.h"
+
+1763154031 source:c:\users\administrator\juego-llega-al-centro\src\jugador.cpp
+	"Jugador.h"
+
+1763152904 source:c:\users\administrator\juego-llega-al-centro\src\rng.cpp
+	"RNG.h"
+
+1763136419 source:c:\users\administrator\juego-llega-al-centro\src\tablero.cpp
+	"Tablero.h"
 
