@@ -19,7 +19,8 @@ class Juego
         void setDificultad(string dificultad);
         void setJuego();
 
-        void moverJugadores(int numeroJugador);
+        bool moverJugadores(int numeroJugador);
+        void jugar();
 
 
     protected:
