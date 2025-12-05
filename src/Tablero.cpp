@@ -75,19 +75,16 @@ Tablero::Tablero(int tamano){
     RNG rngValor = RNG(tamano);   // valores 1..tamano por ejemplo
 
     for (int i = 0; i < cantidadCasillasEspeciales; i++) {
-        int x = posiciones[i].first;
-        int y = posiciones[i].second;
+        if (posiciones[i].first!=0 && posiciones[i].second!=0 || posiciones[i].first!=0 && posiciones[i].second!=tamano || posiciones[i].first!=tamano && posiciones[i].second!=tamano || posiciones[i].first!=tamano && posiciones[i].second!=0){
+            int x = posiciones[i].first;
+            int y = posiciones[i].second;
 
-        esEspecial[x][y] = true;
-        descubierta[x][y] = false;
+            esEspecial[x][y] = true;
+            descubierta[x][y] = false;
 
-        int v = rngValor.getRandom();  // 1..tamano
+            int v = rngValor.getRandom();  // 1..tamano
 
-        // mitad recompensa (+v), mitad castigo (-v)
-        if (i % 2 == 0) {
             valor[x][y] = v;
-        } else {
-            valor[x][y] = -v;
         }
     }
 }

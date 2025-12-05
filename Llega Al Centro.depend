@@ -32,7 +32,7 @@
 
 1762549398 d:\users\usuario\desktop\proyecto segundo semestre\llega al centro\include\tablero.h
 
-1763260784 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
+1763477170 source:d:\users\usuario\desktop\juego-llega-al-centro\main.cpp
 	<iostream>
 	<string>
 	<Juego.h>
@@ -56,10 +56,10 @@
 1762644985 d:\users\usuario\desktop\juego-llega-al-centro\include\dado.h
 	<RNG.h>
 
-1763261578 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
+1764966186 source:d:\users\usuario\desktop\juego-llega-al-centro\src\juego.cpp
 	"Juego.h"
 
-1763257670 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
+1763477170 d:\users\usuario\desktop\juego-llega-al-centro\include\juego.h
 	<vector>
 	<Dado.h>
 	<Jugador.h>
@@ -72,10 +72,10 @@
 1763244094 d:\users\usuario\desktop\juego-llega-al-centro\include\jugador.h
 	<string>
 
-1762670615 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
+1764964479 source:d:\users\usuario\desktop\juego-llega-al-centro\src\tablero.cpp
 	"Tablero.h"
 
-1762710555 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
+1763477170 d:\users\usuario\desktop\juego-llega-al-centro\include\tablero.h
 	<vector>
 	<utility>
 	<algorithm>

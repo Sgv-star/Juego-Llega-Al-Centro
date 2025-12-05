@@ -82,9 +82,9 @@ void Juego::setJuego() {
 }
 
 
-//La idea aqui es que los dados se lancen segun la posicion del jugador y dentro del propio vector el orden es as� (arriba, abajo, izquierda, derecha)
+//La idea aqui es que los dados se lancen segun la posicion del jugador y dentro del propio vector el orden es así (arriba, abajo, izquierda, derecha)
 bool Juego::moverJugadores(int numeroJugador){
-    int tamano = 0;
+    int tamano = 0, banderaOpcionesSentidos=0;
     if (dificultad == "facil")      tamano = 15;
     else if (dificultad == "medio") tamano = 23;
     else if (dificultad == "dificil") tamano = 31;
@@ -96,42 +96,94 @@ bool Juego::moverJugadores(int numeroJugador){
     int arriba = -1, abajo = -1, izquierda = -1, derecha = -1;
     pair<int, int> posicionActual(x, y);
 
+
+    int pvActual = jugadores[numeroJugador].getPVActual();
+
     dados.resize(4);
-    for(int i = 0; i < dados.size(); i++){
+    for(int i = 0; i < (int)dados.size(); i++){
         dados[i] = Dado(jugadores[numeroJugador].getPVInicial());
         switch(i){
         case 0:
-            if(x > 0){
-                arriba = dados[i].sacarNumero();
-                cout << "Arriba: " << arriba << endl;
+            if (x > 0) {
+                int tirada = dados[i].sacarNumero();
+                if (tirada <= pvActual) {
+                    arriba = tirada;
+                    cout << "Arriba: " << tirada << endl;
+                    banderaOpcionesSentidos+=1;
+                } else {
+                    arriba = -1;
+                    cout << "Arriba: X " << tirada
+                     << " > PV actual " << pvActual << ")\n";
             }
-            break;
+        }
+        break;
         case 1:
-            if(x < tamano-1){
-                abajo = dados[i].sacarNumero();
-                cout << "Abajo: " << abajo << endl;
+            if (x < tamano-1) {
+                int tirada = dados[i].sacarNumero();
+                if (tirada <= pvActual) {
+                    abajo = tirada;
+                    cout << "Abajo: " << tirada << endl;
+                    banderaOpcionesSentidos+=1;
+                } else {
+                        abajo = -1;
+                        cout << "Abajo: X " << tirada
+                        << " > PV actual " << pvActual << ")\n";
+                }
             }
-            break;
+        break;
         case 2:
-            if(y > 0){
-                izquierda = dados[i].sacarNumero();
-                cout << "Izquierda: " << izquierda << endl;
+            if (y > 0) {
+            int tirada = dados[i].sacarNumero();
+            if (tirada <= pvActual) {
+                izquierda = tirada;
+                cout << "Izquierda: " << tirada << endl;
+                banderaOpcionesSentidos+=1;
+            } else {
+            izquierda = -1;
+            cout << "Izquierda: X  " << tirada
+                << " > PV actual " << pvActual << ")\n";
             }
-            break;
+        }
+        break;
         case 3:
-            if(y < tamano-1){
-                derecha = dados[i].sacarNumero();
+            if (y < tamano-1) {
+            int tirada = dados[i].sacarNumero();
+            if (tirada <= pvActual) {
+                derecha = tirada;
                 cout << "Derecha: " << derecha << endl;
+                banderaOpcionesSentidos+=1;
+            } else {
+                derecha = -1;
+                cout << "Derecha: X  " << tirada
+                    << " > PV actual " << pvActual << ")\n";
+                }
             }
             break;
         }
     }
 
+    if (arriba == -1 && abajo == -1 && izquierda == -1 && derecha == -1) {
+        cout << "No hay movimientos validos desde esta posicion. "
+             << "Pierdes el turno.\n";
+        // No cambiamos PV, no movemos al jugador
+        return false; // el juego sigue, pero este jugador no se mueve
+    }
+
 
     vector<int> direcciones = {arriba, abajo, izquierda, derecha};
     do {
-        cout << "Escoja un sentido (0: Arriba, 1: Abajo, 2: Izquierda, 3: Derecha): ";
-        cin >> eleccionSentido;
+        if(banderaOpcionesSentidos>1){
+            cout << "Escoja un sentido (0: Arriba, 1: Abajo, 2: Izquierda, 3: Derecha): ";
+            cin >> eleccionSentido;
+        }
+        else if(banderaOpcionesSentidos==1){
+            for (int i=0; i<4; i++){
+                if(direcciones[i] != -1){
+                    eleccionSentido=i;
+                    break;
+                }
+            }
+        }
 
         if (eleccionSentido < 0 || eleccionSentido > 3) {
             cout << "Opcion fuera de rango. Intente de nuevo. "<<endl;
@@ -139,7 +191,7 @@ bool Juego::moverJugadores(int numeroJugador){
         }
 
         if (direcciones[eleccionSentido] == -1) {
-            cout << "Movimiento invalido (fuera del tablero). Escoja una direccion valida." << endl;
+            cout << "Movimiento invalido. Escoja una direccion valida." << endl;
         }
 
     } while (eleccionSentido < 0 || eleccionSentido > 3 ||
@@ -147,8 +199,15 @@ bool Juego::moverJugadores(int numeroJugador){
 
 
     jugadores[numeroJugador].setPVActual(
-        jugadores[numeroJugador].getPVActual() - 1
+        jugadores[numeroJugador].getPVActual() - direcciones[eleccionSentido]
     );
+
+    if (jugadores[numeroJugador].getPVActual() <= 0) {
+        cout << "El jugador " << jugadores[numeroJugador].getNombre()
+             << " ha quedado eliminado (PV <= 0).\n";
+        // No hace falta return true, el juego no termina aún;
+        // solo marcamos que este jugador ya no puede jugar más.
+    }
 
 
     if (eleccionSentido == 0) {
@@ -182,6 +241,9 @@ bool Juego::moverJugadores(int numeroJugador){
 
                 if(eleccion == 2){
                     jugadores[numeroJugador].setPVActual(jugadores[numeroJugador].getPVActual() + valor);
+                    if(jugadores[numeroJugador].getPVInicial() < jugadores[numeroJugador].getPVActual()){
+                        jugadores[numeroJugador].setPVInicial(jugadores[numeroJugador].getPVActual());
+                    }
                 }else if (eleccion == 1){
 
                 int num = jugadores[numeroJugador].getNumeroJugador();
@@ -207,7 +269,7 @@ bool Juego::moverJugadores(int numeroJugador){
 }
     cout<<"Puntos de vida actual"<<endl;
     for(int j = 0; j < (int)jugadores.size(); j ++){
-        cout<<"Jugador : "<<jugadores[j].getNombre() << "Vida: "<<jugadores[j].getPVActual();
+        cout<<"Jugador : "<<jugadores[j].getNombre() << "  Vida: "<<jugadores[j].getPVActual();
         cout<<endl;
     }
     setJuego();
@@ -229,17 +291,61 @@ void Juego::jugar() {
     bool terminado = false;
     int turno = 0;
 
-
     while (!terminado) {
-        cout << "Turno del jugador "<<endl
+
+        //  1. Contar cuántos siguen vivos (PV > 0)
+        int vivos = 0;
+        int indiceUltimoVivo = -1;
+        for (int i = 0; i < (int)jugadores.size(); i++) {
+            if (jugadores[i].getPVActual() > 0) {
+                vivos++;
+                indiceUltimoVivo = i;
+            }
+        }
+
+        //  2. Si solo queda uno vivo → gana automáticamente
+        if (vivos == 1) {
+            cout << "Juego terminado (solo queda un jugador con PV > 0).\n";
+            cout << "El ganador es: " << jugadores[indiceUltimoVivo].getNombre()
+                 << " con " << jugadores[indiceUltimoVivo].getPVActual() << " PV.\n";
+            break;
+        }
+
+        //  3. Si ninguno tiene PV > 0 → desempate por quien tenga más PV
+        if (vivos == 0) {
+            int idxGanador = 0;
+            int mejorPV = jugadores[0].getPVActual();
+            for (int i = 1; i < (int)jugadores.size(); i++) {
+                if (jugadores[i].getPVActual() > mejorPV) {
+                    mejorPV = jugadores[i].getPVActual();
+                    idxGanador = i;
+                }
+            }
+            cout << "Todos los jugadores han llegado a PV <= 0.\n";
+            cout << "Desempate por PV: gana "
+                 << jugadores[idxGanador].getNombre()
+                 << " con " << mejorPV << " PV.\n";
+            break;
+        }
+
+        //  4. Saltar jugadores eliminados
+        int intentos = 0;
+        while (jugadores[turno].getPVActual() <= 0 && intentos < (int)jugadores.size()) {
+            turno = (turno + 1) % jugadores.size();
+            intentos++;
+        }
+
+        // (por seguridad, si todos estaban <= 0, ya lo manejamos arriba con vivos == 0)
+
+        cout << "Turno del jugador "
              << jugadores[turno].getNumeroJugador()
              << " (" << jugadores[turno].getNombre() << ")\n";
 
-
+        //  5. Juega el turno normalmente
         terminado = moverJugadores(turno);
 
+        // 6. Si no terminó por llegar al centro, pasar turno al siguiente
         if (!terminado) {
-
             turno = (turno + 1) % jugadores.size();
         }
     }
