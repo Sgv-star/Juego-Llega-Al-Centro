@@ -84,7 +84,12 @@ Tablero::Tablero(int tamano){
 
             int v = rngValor.getRandom();  // 1..tamano
 
-            valor[x][y] = v;
+            // mitad recompensa (+v), mitad castigo (-v)
+             if (i % 2 == 0) {
+                valor[x][y] = v;
+            } else {
+                valor[x][y] = -v;
+            }
         }
     }
 }
